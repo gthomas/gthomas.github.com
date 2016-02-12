@@ -1,10 +1,15 @@
 <html>
   <body>
     <button id="button1" type="button">Click Me!</button>
+    <div id="div1" style="background-color: blue; width: 50px;"> Click Me!</div>
 
     <script>
       document.getElementById("button1").addEventListener("click", function() {
-         parent.postMessage("Hello", "http://fiddle.jshell.net/");
+         parent.postMessage("Hello button", "http://fiddle.jshell.net/");
+      });
+
+      document.getElementById("button1").addEventListener("click", function() {
+         parent.postMessage("Hello div", "http://fiddle.jshell.net/");
       });
     </script>
   <body>
