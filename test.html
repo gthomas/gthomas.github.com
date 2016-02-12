@@ -1,5 +1,11 @@
 <html>
   <body>
-    <input type="button">Go</input>
+    <input id="button1" type="button" text="GO!"></input>
+
+    <script>
+      document.getElementById("button1").addEventListener("click", function() {
+         parent.postMessage("Hello", "http://jsfiddle.net/");
+      });
+    </script>
   <body>
 </html>
