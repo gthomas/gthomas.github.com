@@ -26,16 +26,17 @@ h1 {
   text-transform: uppercase;
   display: inline-block;
   font-size:28px;
+  margin: 0px;
 }
 
 h2 {
-  color: #268bd2;
+  color: #B58900;
   font-size: 28px;
   display: inline-block;
 }
 
 h3, h4, h5, h6 {
-  color:#93a1a1;
+  color:#678CB1;
 }
 
 .constant {
@@ -60,9 +61,11 @@ h3, h4, h5, h6 {
 
 .project img{
     width: 640px;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: auto;
 }
 
 .project h3{
@@ -72,7 +75,7 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color: #859900;
+  color: #268bd2;
   font-weight:400;
   text-decoration:none;
 }
@@ -281,6 +284,12 @@ footer {
   header ul {
     display:none;
   }
+
+  .overlay {
+      font-size: 10px;
+      overflow: hidden;
+  }
+
 }
 
 @media print {
@@ -289,4 +298,57 @@ footer {
     font-size:12pt;
     color:#444;
   }
+}
+
+
+@media screen {
+    .overlay:hover {
+        opacity: 1;
+        -webkit-transition: opacity .25s ease-in-out .0s;
+        transition: opacity .25s ease-in-out .0s
+    }
+}
+
+@media handheld {
+    .overlay {
+        font-size: 8px;
+    }
+}
+
+.projectinner {
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: block;
+    width: auto;
+}
+
+.overlay {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color:rgba(0,43,54,0.85);
+}
+
+
+.overlay.hover_effect {
+    opacity: 1;
+    -webkit-transition: opacity .25s ease-in-out .0s;
+    transition: opacity .25s ease-in-out .0s
+}
+
+.overlay ul {
+    margin: 28px;
+    list-style: none;
+}
+
+.overlay ul li {
+    margin-top: 14px;
+}
+
+.overlay ul li span {
+    color: #dc322f;
+    font-weight: bold;
 }
