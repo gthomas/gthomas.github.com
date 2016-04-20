@@ -274,6 +274,11 @@ footer {
   pre, code {
     word-wrap:normal;
   }
+
+  .overlay {
+      font-size: 12px;
+      overflow: hidden;
+  }
 }
 
 @media print, screen and (max-width: 480px) {
@@ -340,7 +345,9 @@ footer {
 }
 
 .overlay ul {
-    margin: 28px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     list-style: none;
 }
 
